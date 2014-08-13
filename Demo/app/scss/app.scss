@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 9, 2014, 10:52:12 AM
+    Author     : Roger
+*/
+@import 'mixins';
+@import '_normalize';
+
+$debug: true;
+$debugBlue: blue;
+$debugGreen: green;
+
+html, body {
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+     @include box-sizing(border-box);
+}
+
+
+.box_floating{   
+     text-align: center;
+     width:250px;
+     height:250px;
+     display: inline-block;
+     margin:10px;
+     @include linear-gradient(blue, gray);
+     @include box-shadow(8px, 8px, 8px, black, 0, null, 8px );
+}
+
+
+.drop_zone{
+     text-align: center;
+     width:100%;
+     min-height: 50%;
+     height:100%;
+     background-color: #669900;
+     padding-bottom: 10px;
+     padding-top: 10px;
+}
+
+.drag_gutter{
+     vertical-align: top;
+     width: 40%;
+     height:100vh;
+     display: inline-block;
+/*     overflow: hidden;*/
+     margin-right: 50px;
+     margin-left: 50px;
+     padding: 15px;
+     
+     @include box-shadow(5px, 5px, 5px, #058910, 0, null, 5px );
+
+}

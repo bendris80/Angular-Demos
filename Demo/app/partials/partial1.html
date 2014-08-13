@@ -1,0 +1,22 @@
+<p>This is the partial for view 1.</p>
+
+<div class="drag_gutter">
+     <h1>Drag 'em</h1>
+     <div class="box_floating" ng-repeat="obj in draggableObjects" ng-drag="true" ng-drag-data="obj">
+          <h2>{{obj.name}}</h2>
+          <h3>{{obj.index}}</h3>
+     </div>
+</div>
+
+<div class="drag_gutter">
+     <h1>Drop 'em</h1>
+     <div class="drop_zone" ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+
+          <div class="box_floating" ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)">
+               <h2>{{obj.name}}</h2>
+               <h3>{{obj.index}}</h3>
+          </div>
+          <div style="clear: both;"></div>
+     </div>
+
+</div>
