@@ -1,24 +1,45 @@
 'use strict';
-
 /* Controllers */
-
 angular.module('myApp.controllers', [])
-  .controller('MyCtrl1', ['$scope', function($scope) {
-            $scope.draggableObjects = [{name:'Drag A Box',index:'one'}, {name:'Drag A Box',index:'two'}, {name:'Drag A Box',index:'three'}];
-        $scope.droppedObjects1 = [];
-        $scope.droppedObjects2= [];
-        $scope.onDropComplete1=function(data,evt){
-            var index = $scope.droppedObjects1.indexOf(data);
-            if (index === -1)
-            $scope.droppedObjects1.push(data);
-        };
-        $scope.onDragSuccess1=function(data,evt){
-            var index = $scope.droppedObjects1.indexOf(data);
-            if (index > -1) {
-                $scope.droppedObjects1.splice(index, 1);
-            }
-        };
-  }])
-  .controller('MyCtrl2', ['$scope', function($scope) {
+        .controller('Area1Ctrl', ['$scope', 'objectManager', function($scope, objectManager) {
+                  $scope.areaObjects = objectManager.getList1();
+                  $scope.DropInComplete = function(data, evt) {
+                       objectManager.addObjectToList1(data);
+                  };
+                  $scope.DragAwaySuccess = function(data, evt) {
+                       objectManager.removeObjectFromList1(data);
+                  };
+             }])
+        .controller('Area2Ctrl', ['$scope', 'objectManager', function($scope, objectManager) {
+                  $scope.areaObjects = objectManager.getList2();
+                  $scope.DropInComplete = function(data, evt) {
+                       objectManager.addObjectToList2(data);
+                  };
+                  $scope.DragAwaySuccess = function(data, evt) {
+                       objectManager.removeObjectFromList2(data);
+                  };
+             }])
+        .controller('Area3Ctrl', ['$scope', 'objectManager', function($scope, objectManager) {
+                  $scope.areaObjects = objectManager.getList3();
+                  $scope.DropInComplete = function(data, evt) {
+                       objectManager.addObjectToList3(data);
+                  };
+                  $scope.DragAwaySuccess = function(data, evt) {
+                       objectManager.removeObjectFromList3(data);
+                  };
+             }])
+        .controller('Area4Ctrl', ['$scope', 'objectManager', function($scope, objectManager) {
+                  $scope.areaObjects = objectManager.getList4();
+                  $scope.DropInComplete = function(data, evt) {
+                       objectManager.addObjectToList4(data);
+                  };
+                  $scope.DragAwaySuccess = function(data, evt) {
+                       objectManager.removeObjectFromList4(data);
+                  };
+             }])
+        .controller('MyCtrl1', ['$scope', function($scope) {
 
-  }]);
+             }])
+        .controller('MyCtrl2', ['$scope', function($scope) {
+
+             }]);

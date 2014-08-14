@@ -6,6 +6,7 @@ angular.module('myApp', [
   'ngRoute',
   'ngDraggable',
   'myApp.filters',
+  'myApp.providers',
   'myApp.services',
   'myApp.directives',
   'myApp.controllers'

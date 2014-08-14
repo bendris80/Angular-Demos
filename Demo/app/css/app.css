@@ -228,15 +228,66 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+html {
+  height: 100vh;
+  width: 100vh; }
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.box_floating {
+header {
+  border-bottom: #000 1px solid;
+  margin-bottom: 10px; }
+  header .menu li {
+    display: inline-block;
+    margin-right: 10px; }
+
+.main_container {
+  min-height: 100%;
+  margin-bottom: -200px;
+  position: relative; }
+
+.clearfooter {
+  height: 200px;
+  clear: both; }
+
+footer {
+  height: 200px;
+  margin-top: 15px;
+  position: relative;
+  text-align: center;
+  border-top: #000 1px solid; }
+
+.drop_zone {
+  text-align: center;
+  width: 100%;
+  min-height: 250px;
+  background-color: #669900;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+
+.drag_gutter {
+  vertical-align: top;
+  width: 40%;
+  min-height: 350px;
+  max-height: 700px;
+  display: inline-block;
+  /*     overflow: hidden;*/
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding: 15px;
+  -moz-box-shadow: 5px 5px 5px 5px #058910;
+  -webkit-box-shadow: 5px 5px 5px 5px #058910;
+  box-shadow: 5px 5px 5px 5px #058910; }
+
+.draggable_box {
   text-align: center;
   width: 250px;
   height: 250px;
@@ -252,27 +303,5 @@ html, body {
   -moz-box-shadow: 8px 8px 8px 8px black;
   -webkit-box-shadow: 8px 8px 8px 8px black;
   box-shadow: 8px 8px 8px 8px black; }
-
-.drop_zone {
-  text-align: center;
-  width: 100%;
-  min-height: 50%;
-  height: 100%;
-  background-color: #669900;
-  padding-bottom: 10px;
-  padding-top: 10px; }
-
-.drag_gutter {
-  vertical-align: top;
-  width: 40%;
-  height: 100vh;
-  display: inline-block;
-  /*     overflow: hidden;*/
-  margin-right: 50px;
-  margin-left: 50px;
-  padding: 15px;
-  -moz-box-shadow: 5px 5px 5px 5px #058910;
-  -webkit-box-shadow: 5px 5px 5px 5px #058910;
-  box-shadow: 5px 5px 5px 5px #058910; }
 
 /*# sourceMappingURL=app.css.map */
